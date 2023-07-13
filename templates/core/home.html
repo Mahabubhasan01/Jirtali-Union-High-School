@@ -1,3 +1,8 @@
-{% extends 'core/base.html' %} {% block title %}home{% endblock title %} 
-{% block link %}{% endblock %}
-{% block content %}{% endblock %}
+{% extends 'core/base.html' %}
+{% block content %}
+{% include 'core/Gallery.html' %}
+{% include 'core/teachers.html' %}
+{% include 'core/gpastudent.html' %}
+{% include 'core/Notifications.html' %}
+{% include 'core/overviewcounter.html' %}
+{% endblock content %}

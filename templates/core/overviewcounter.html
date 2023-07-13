@@ -1,0 +1,45 @@
+{% load static %} {% block link %}
+
+<link rel="stylesheet" href="{% static 'css/overviewcounter.css' %}" />
+{% endblock link %}
+<div id="counter">
+  <div class="item">
+    <h1 class="count" data-number="1928"></h1>
+    <h3 class="text">Since created</h3>
+  </div>
+  <div class="item">
+    <h1 class="count" data-number="30"></h1>
+    <h3 class="text">Teachers</h3>
+  </div>
+  <div class="item">
+    <h1 class="count" data-number="2040"></h1>
+    <h3 class="text">Students</h3>
+  </div>
+  <div class="item">
+    <h1 class="count" data-number="100">%</h1>
+    <h3 class="text">Gpa</h3>
+  </div>
+</div>
+{% block javascript %}
+<script>
+  let count = document.querySelectorAll(".count");
+  let arr = Array.from(count);
+
+  arr.map(function (item) {
+    let startnumber = 0;
+
+    function counterup() {
+      startnumber++;
+      item.innerHTML = startnumber;
+
+      if (startnumber == item.dataset.number) {
+        clearInterval(stop);
+      }
+    }
+
+    let stop = setInterval(function () {
+      counterup();
+    }, 50);
+  });
+</script>
+{% endblock javascript %}

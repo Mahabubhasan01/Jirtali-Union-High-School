@@ -1,5 +1,4 @@
-{% load sass_tags %}
-
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -7,12 +6,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    {% block title %}
-    <title>Home</title>
-    {% endblock title %} {% block link %} {% endblock %}
+    <title>{% block title %}home{% endblock title %}</title>
+    {% comment %} <link rel="stylesheet" href="https://unpkg.com/ionicons@4.5.10-0/dist/css/ionicons.min.css"> {% endcomment %}
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css">
+    
+     {% block link %} {% endblock link %}
   </head>
   <body>
-    {% include 'core/Navbar.html' %} {% block content %}{% endblock content %}
-    {% block javascript %}{% endblock %}
+    {% include 'core/Navigation.html' %} {% block content %}{% endblock content %}
+  {% block javascript %}{% endblock javascript %}
   </body>
 </html>
