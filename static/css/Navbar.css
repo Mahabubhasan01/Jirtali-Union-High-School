@@ -149,6 +149,7 @@ video {
   line-height: 1.25;
   visibility: hidden;
   text-transform: capitalize;
+  color: #000;
 }
 
 @media only screen and (min-width: 360px) {
