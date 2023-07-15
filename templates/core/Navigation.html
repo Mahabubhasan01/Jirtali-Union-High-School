@@ -29,7 +29,7 @@
   </nav>
 </header>
 <main class="main">
-  <section class="section banner banner-section">
+ {% comment %}  <section class="section banner banner-section">
     <div class="container banner-column">
       <img
         class="banner-image"
@@ -47,7 +47,8 @@
         </button>
       </div>
     </div>
-  </section>
+  </section> {% endcomment %}
+  {% include 'core/Carousel.html' %}
 </main>
 <script>
   const navbarMenu = document.getElementById("menu");

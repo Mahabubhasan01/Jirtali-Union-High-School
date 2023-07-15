@@ -8,14 +8,6 @@
   line-height: 56px;
 }
 
-*,
-::after,
-::before {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
 .effectTab-header .caption,
 .effectTab-header .title {
   font-weight: 700;
