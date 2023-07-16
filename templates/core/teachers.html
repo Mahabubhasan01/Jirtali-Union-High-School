@@ -1,7 +1,7 @@
 {% load static %} {% block link %}
 <link rel="stylesheet" href="{% static 'css/teachers.css' %}" /> {% endblock link %}
 
-<div class="responsive-container-block containerr">
+<div class="responsive-container-block containerr" id='teachers'>
   <p class="text-blk team-head-text">Honourable Teachers</p>
   <div class="responsive-container-block">
     {% if teachers %} {% for teacher in teachers %}

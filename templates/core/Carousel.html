@@ -5,29 +5,13 @@
 {% endblock link %}
 
 <div id="CrossFade">
-  <img
-    src="https://i.ibb.co/FJZvgr9/photo-1546410531-bb4caa6b424d.png"
-    alt="img"
-  />
+  {% if carousel %} {% for c in carousel %}
 
-  <img
-    src="https://i.ibb.co/YLrC92S/photo-1494949649109-ecfc3b8c35df.png"
-    alt="img"
-  /><img
-    src="https://i.ibb.co/hYk4dJv/photo-1509062522246-3755977927d7.png"
-    alt="img"
-  /><img
-    src="https://i.ibb.co/mcQXyx4/photo-1588075592446-265fd1e6e76f.png"
-    alt="img"
-  /><img
-    src=" https://i.ibb.co/4T9wLmB/photo-1591123120675-6f7f1aae0e5b.png"
-    alt="img"
-  />
+  <img src="{{c.img}}" alt="img" />
+{% comment %} 
   <div class="intro">
-    <h1>Lorem ipsum dolor sit amet</h1>
-    <p>
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis
-      impedit facilis nesciunt quam vitae voluptatibus ullam vero.
-    </p>
-  </div>
+    <h1>{{ c.title }}</h1>
+    <p>{{ c.info }}</p>
+  </div> {% endcomment %}
+  {% endfor %} {% endif %}
 </div>

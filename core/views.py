@@ -205,13 +205,125 @@ def Home(request):
     https://i.ibb.co/MhhTc8z/images-14.jpg
     https://i.ibb.co/yk5p7Fd/images-15.jpg
     https://i.ibb.co/PGgkCMy/images.jpghttps://i.ibb.co/LrwqkN3/download-1.jpg """
-    carousel = [{
-        'name': '',
-        "img": "https: // i.ibb.co/0YKGRWF/download.jpg",
-        "info": ""
-    }]
+    carousel = [
+        {
+            'title': 'Main office building',
+            "img": "https://i.ibb.co/FJZvgr9/photo-1546410531-bb4caa6b424d.png",
+            "info": ""
+        },
+        {
+            'title': 'Academics building',
+            "img": "https://i.ibb.co/YLrC92S/photo-1494949649109-ecfc3b8c35df.png",
+            "info": ""
+        },
+        {
+            'title': 'Scienece building',
+            "img": "https://i.ibb.co/YLrC92S/photo-1494949649109-ecfc3b8c35df.png",
+            "info": ""
+        },
+        {
+            'title': 'Commerce building',
+            "img": "https://i.ibb.co/hYk4dJv/photo-1509062522246-3755977927d7.png",
+            "info": ""
+        },
+        {
+            'title': 'Arts building',
+            "img": "https://i.ibb.co/mcQXyx4/photo-1588075592446-265fd1e6e76f.png",
+            "info": ""
+        },
+        {
+            'title': 'School playgorund',
+            "img": " https://i.ibb.co/4T9wLmB/photo-1591123120675-6f7f1aae0e5b.png",
+            "info": ""
+        },
+    ]
+
     return render(request, 'core/home.html', {'teachers': teachers, 'students': students, "carousel": carousel})
 
 
 def Dashboard(request):
-    return render(request, 'core/dashboard/dashboardNav.html')
+
+    dashnav = [
+        {
+            "url-name": "dashboard-home",
+            "icon_name": "bx bx-grid-alt",
+            "nav_name": "Dashboard",
+        },
+        {
+            "url-name": "",
+            "icon_name": "bx bx-group",
+            "nav_name": "Teachers",
+        },
+        {
+            "url-name": "",
+            "icon_name": "bx bx-group",
+            "nav_name": "Students",
+        },
+        {
+            "url-name": "",
+            "icon_name": "bx bx-edit-alt",
+            "nav_name": "Attendance",
+        },
+        {
+            "url-name": "",
+            "icon_name": "bx bx-notepad",
+            "nav_name": "Results",
+        },
+        {
+            "url-name": "",
+            "icon_name": "bx bxs-edit",
+            "nav_name": "Exams",
+        },
+        {
+            "url-name": "",
+            "icon_name": "bx bx-right-indent",
+            "nav_name": "Classes",
+        },
+        {
+            "url-name": "",
+            "icon_name": "bx bx-columns",
+            "nav_name": "Sections",
+        },
+        {
+            "url-name": "",
+            "icon_name": "bx bx-money",
+            "nav_name": "Fee",
+        },
+        {
+            "url-name": "",
+            "icon_name": "bx bx-user-plus",
+            "nav_name": "Staffs",
+        },
+        {
+            "url-name": "",
+            "icon_name": "bx bx-user-plus",
+            "nav_name": "Users",
+        },
+        {
+            "url-name": "",
+            "icon_name": "bx bxs-user-detail",
+            "nav_name": "Profile",
+        },
+        {
+            "url-name": "",
+            "icon_name": "bx bx-pie-chart-alt-2",
+            "nav_name": "Analytics",
+        },
+        {
+            "url-name": "",
+            "icon_name": "bx bx-bell",
+            "nav_name": "Analytics",
+        },
+        {
+            "url-name": "",
+            "icon_name": "bx bx-cog",
+            "nav_name": "Settings",
+        },
+    ]
+    print(dashnav,"hey")
+
+    return render(request, 'core/dashboard/dashboardNav.html', {"navs": dashnav})
+
+
+def Dashbord_Home(request):
+    return render(request, 'core/dashboard/dashboardhome.html')
