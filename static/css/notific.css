@@ -1,7 +1,3 @@
-/**
-     * Don't need this because
-     * .woff is not accessible from cross domain
-     */
 @font-face {
   font-family: "atvice";
   src: url("https://github.com/Flat-Pixels/Notifications-card-animation/raw/master/fonts/atvice-webfont.woff")
@@ -16,10 +12,10 @@
   display: flex;
   flex-wrap: wrap;
 }
-.wrapperr {
+/* .wrapperr {
   width: 480px;
   margin: 50px auto;
-}
+} */
 
 .notifications__item {
   display: flex;
