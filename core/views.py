@@ -210,4 +210,8 @@ def Home(request):
         "img": "https: // i.ibb.co/0YKGRWF/download.jpg",
         "info": ""
     }]
-    return render(request, 'core/home.html', {'teachers': teachers, 'students': students,"carousel":carousel})
+    return render(request, 'core/home.html', {'teachers': teachers, 'students': students, "carousel": carousel})
+
+
+def Dashboard(request):
+    return render(request, 'core/dashboard/dashboardNav.html')
