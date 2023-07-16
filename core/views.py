@@ -291,12 +291,12 @@ def Dashboard(request):
         },
         {
             "url-name": "",
-            "icon_name": "bx bx-user-plus",
+            "icon_name": "bx bx-group",
             "nav_name": "Staffs",
         },
         {
             "url-name": "",
-            "icon_name": "bx bx-user-plus",
+            "icon_name": "bx bx-group",
             "nav_name": "Users",
         },
         {
@@ -312,7 +312,7 @@ def Dashboard(request):
         {
             "url-name": "",
             "icon_name": "bx bx-bell",
-            "nav_name": "Analytics",
+            "nav_name": "Notifications",
         },
         {
             "url-name": "",
@@ -320,7 +320,6 @@ def Dashboard(request):
             "nav_name": "Settings",
         },
     ]
-    print(dashnav,"hey")
 
     return render(request, 'core/dashboard/dashboardNav.html', {"navs": dashnav})
 
