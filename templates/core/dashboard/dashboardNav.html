@@ -393,11 +393,11 @@
     </li>
     {% if navs %} {% for nv in navs %}
     <li>
-      <a href="{% url 'dashboard-home' %}">
-        <i class="{{nv.icon_name}}"></i>
-        <span class="link_names">{{nv.nav_name}}</span>
+      <a href="{% url 'teachers' %}">
+        <i class="{{ nv.icon_name }}"></i>
+        <span class="link_names">{{ nv.nav_name }}</span>
       </a>
-      <span class="tooltip">{{nv.nav_name}}</span>
+      <span class="tooltip">{{ nv.nav_name }}</span>
     </li>
     {% endfor %} {% endif %}
   </ul>
@@ -414,20 +414,6 @@
         </div>
       </div>
       <i class="bx bx-log-out" id="log_out"></i>
-    </div>
-  </div>
-</div>
-
-<div class="home_content">
-  <div class="main-container">
-    <div class="cards">
-      {% if navs %} {% for nv in navs %}
-      <div class="card card-1">
-        <div class="card__icon"><i class="{{nv.icon_name}}"></i></div>
-
-        <h2 class="card__title">{{nv.nav_name}}</h2>
-      </div>
-      {% endfor %} {% endif %}
     </div>
   </div>
 </div>

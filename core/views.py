@@ -1,6 +1,83 @@
 from django.shortcuts import render
 
 # Create your views here.
+dashnav = [
+    {
+        "url_name": "dashboard-home",
+        "icon_name": "bx bx-grid-alt",
+        "nav_name": "Dashboard",
+    },
+    {
+        "url_name": "teachers",
+        "icon_name": "bx bx-group",
+        "nav_name": "Teachers",
+    },
+    {
+        "url_name": "dashboard-home",
+        "icon_name": "bx bx-group",
+        "nav_name": "Students",
+    },
+    {
+        "url_name": "dashboard-home",
+        "icon_name": "bx bx-edit-alt",
+        "nav_name": "Attendance",
+    },
+    {
+        "url_name": "dashboard-home",
+        "icon_name": "bx bx-notepad",
+        "nav_name": "Results",
+    },
+    {
+        "url_name": "dashboard-home",
+        "icon_name": "bx bxs-edit",
+        "nav_name": "Exams",
+    },
+    {
+        "url_name": "dashboard-home",
+        "icon_name": "bx bx-right-indent",
+        "nav_name": "Classes",
+    },
+    {
+        "url_name": "dashboard-home",
+        "icon_name": "bx bx-columns",
+        "nav_name": "Sections",
+    },
+    {
+        "url_name": "dashboard-home",
+        "icon_name": "bx bx-money",
+        "nav_name": "Fee",
+    },
+    {
+        "url_name": "dashboard-home",
+        "icon_name": "bx bx-group",
+        "nav_name": "Staffs",
+    },
+    {
+        "url_name": "dashboard-home",
+        "icon_name": "bx bx-group",
+        "nav_name": "Users",
+    },
+    {
+        "url_name": "",
+        "icon_name": "bx bxs-user-detail",
+        "nav_name": "Profile",
+    },
+    {
+        "url_name": "dashboard-home",
+        "icon_name": "bx bx-pie-chart-alt-2",
+        "nav_name": "Analytics",
+    },
+    {
+        "url_name": "dashboard-home",
+        "icon_name": "bx bx-bell",
+        "nav_name": "Notifications",
+    },
+    {
+        "url_name": "dashboard-home",
+        "icon_name": "bx bx-cog",
+        "nav_name": "Settings",
+    },
+]
 
 
 def Home(request):
@@ -243,86 +320,8 @@ def Home(request):
 
 def Dashboard(request):
 
-    dashnav = [
-        {
-            "url-name": "dashboard-home",
-            "icon_name": "bx bx-grid-alt",
-            "nav_name": "Dashboard",
-        },
-        {
-            "url-name": "",
-            "icon_name": "bx bx-group",
-            "nav_name": "Teachers",
-        },
-        {
-            "url-name": "",
-            "icon_name": "bx bx-group",
-            "nav_name": "Students",
-        },
-        {
-            "url-name": "",
-            "icon_name": "bx bx-edit-alt",
-            "nav_name": "Attendance",
-        },
-        {
-            "url-name": "",
-            "icon_name": "bx bx-notepad",
-            "nav_name": "Results",
-        },
-        {
-            "url-name": "",
-            "icon_name": "bx bxs-edit",
-            "nav_name": "Exams",
-        },
-        {
-            "url-name": "",
-            "icon_name": "bx bx-right-indent",
-            "nav_name": "Classes",
-        },
-        {
-            "url-name": "",
-            "icon_name": "bx bx-columns",
-            "nav_name": "Sections",
-        },
-        {
-            "url-name": "",
-            "icon_name": "bx bx-money",
-            "nav_name": "Fee",
-        },
-        {
-            "url-name": "",
-            "icon_name": "bx bx-group",
-            "nav_name": "Staffs",
-        },
-        {
-            "url-name": "",
-            "icon_name": "bx bx-group",
-            "nav_name": "Users",
-        },
-        {
-            "url-name": "",
-            "icon_name": "bx bxs-user-detail",
-            "nav_name": "Profile",
-        },
-        {
-            "url-name": "",
-            "icon_name": "bx bx-pie-chart-alt-2",
-            "nav_name": "Analytics",
-        },
-        {
-            "url-name": "",
-            "icon_name": "bx bx-bell",
-            "nav_name": "Notifications",
-        },
-        {
-            "url-name": "",
-            "icon_name": "bx bx-cog",
-            "nav_name": "Settings",
-        },
-    ]
-
     return render(request, 'core/dashboard/dashboardNav.html', {"navs": dashnav})
 
 
 def Dashbord_Home(request):
-    return render(request, 'core/dashboard/dashboardhome.html')
+    return render(request, 'core/dashboard/dashboardhome.html', {"navs": dashnav})
