@@ -84,74 +84,136 @@ dashnav = [
     },
 ]
 
+teachers = [
+    {"name": "Salma Sultana",
+     "role": 'Head Teacher',
+     "subject": "Bangla",
+     "section": "Purple",
+     "durations": "50 m",
+     "css_class": "odd",
+     "moto": "Innovative, charismatic, influential, visionary, approachable, inspiring, dynamic, motivational, knowledgeable, transformational."
+     },
+    {"name": "Honufa Islam",
+     "role": 'Bangla', "subject": "Bangla",
+     "section": "Purple",
+     "durations": "50 m",
+     "css_class": "even",
+     "moto": "Innovative, charismatic, influential, visionary, approachable, inspiring, dynamic, motivational, knowledgeable, transformational."
+     },
+    {"name": "Shilpi Akter",
+     "role": 'General Science',
+     "subject": "Social Science",
+     "section": "Purple",
+     "durations": "50 m",
+     "css_class": "odd",
+     "moto": "Innovative, charismatic, influential, visionary, approachable, inspiring, dynamic, motivational, knowledgeable, transformational."
+     },
+    {"name": "Saiful Islam",
+     "role": 'Math Teacher',
+     "subject": "General Math",
+     "section": "Purple",
+     "durations": "50 m",
+     "css_class": "even",
+     "moto": "Innovative, charismatic, influential, visionary, approachable, inspiring, dynamic, motivational, knowledgeable, transformational."
+     },
+    {"name": "Ummey Honey",
+     "role": 'General Science',
+     "subjects": "Physical Science",
+     "section": "Purple",
+     "durations": "50 m",
+     "css_class": "odd",
+     "moto": "Innovative, charismatic, influential, visionary, approachable, inspiring, dynamic, motivational, knowledgeable, transformational."
+     },
+    {"name": "Nannu Khan",
+     "role": 'Social Science',
+     "subjects": "English Grammer",
+     "section": "Purple",
+     "durations": "50 m",
+     "css_class": "even",
+     "moto": "Innovative, charismatic, influential, visionary, approachable, inspiring, dynamic, motivational, knowledgeable, transformational."
+     },
+    {"name": "Uttam Kumar",
+     "role": 'English Teacher',
+     "subject": "English For Today",
+     "section": "Purple",
+     "durations": "50 m",
+     "css_class": "odd",
+     "moto": "Innovative, charismatic, influential, visionary, approachable, inspiring, dynamic, motivational, knowledgeable, transformational."
+     },
+    {"name": "Bellal Khan",
+     "role": 'Accounting',
+     "section": "Purple",
+     "durations": "50 m",
+     "css_class": "even",
+     "moto": "Innovative, charismatic, influential, visionary, approachable, inspiring, dynamic, motivational, knowledgeable, transformational."
+     },
+    {"name": "Songkar pal",
+     "role": 'Bangla Grammar',
+     "section": "Purple",
+     "durations": "50 m",
+     "css_class": "odd",
+     "moto": "Innovative, charismatic, influential, visionary, approachable, inspiring, dynamic, motivational, knowledgeable, transformational."
+     },
+    {"name": "Salma Sultana",
+     "role": 'Head Teacher',
+     "subject": "Bangla Second Paper",
+     "section": "Purple",
+     "durations": "50 m",
+     "css_class": "even",
+     "moto": "Innovative, charismatic, influential, visionary, approachable, inspiring, dynamic, motivational, knowledgeable, transformational."
+     },
+    {"name": "Salma Sultana",
+     "role": 'Head Teacher',
+     "subject": "Bangla Second Paper",
+     "section": "Purple",
+     "durations": "50 m",
+     "css_class": "odd",
+     "moto": "Innovative, charismatic, influential, visionary, approachable, inspiring, dynamic, motivational, knowledgeable, transformational."
+     },
+    {"name": "Salma Sultana",
+     "role": 'Head Teacher',
+     "subject": "Bangla Second Paper",
+     "section": "Purple",
+     "durations": "50 m",
+     "css_class": "even",
+     "moto": "Innovative, charismatic, influential, visionary, approachable, inspiring, dynamic, motivational, knowledgeable, transformational."
+     },
+    {"name": "Salma Sultana",
+     "role": 'Head Teacher',
+     "subject": "Bangla Second Paper",
+     "section": "Purple",
+     "durations": "50 m",
+     "css_class": "odd",
+     "moto": "Innovative, charismatic, influential, visionary, approachable, inspiring, dynamic, motivational, knowledgeable, transformational."
+     },
+    {"name": "Salma Sultana",
+     "role": 'Head Teacher',
+     "subject": "Bangla Second Paper",
+     "section": "Purple",
+     "durations": "50 m",
+     "css_class": "even",
+     "moto": "Innovative, charismatic, influential, visionary, approachable, inspiring, dynamic, motivational, knowledgeable, transformational."
+     },
+    {"name": "Salma Sultana",
+     "role": 'Head Teacher',
+     "subject": "Bangla Second Paper",
+     "section": "Purple",
+     "durations": "50 m",
+     "css_class": "odd",
+     "moto": "Innovative, charismatic, influential, visionary, approachable, inspiring, dynamic, motivational, knowledgeable, transformational."
+     },
+    {"name": "Salma Sultana",
+     "role": 'Head Teacher',
+     "subject": "Bangla Second Paper",
+     "section": "Purple",
+     "durations": "50 m",
+     "css_class": "even",
+     "moto": "Innovative, charismatic, influential, visionary, approachable, inspiring, dynamic, motivational, knowledgeable, transformational."
+     },
+]
+
 
 def Home(request):
-    teachers = [
-        {"name": "Salma Sultana",
-            "role": 'Head Teacher',
-            "moto": "Innovative, charismatic, influential, visionary, approachable, inspiring, dynamic, motivational, knowledgeable, transformational."
-         },
-        {"name": "Honufa Islam",
-            "role": 'Bangla',
-            "moto": "Innovative, charismatic, influential, visionary, approachable, inspiring, dynamic, motivational, knowledgeable, transformational."
-         },
-        {"name": "Shilpi Akter",
-            "role": 'General Science',
-            "moto": "Innovative, charismatic, influential, visionary, approachable, inspiring, dynamic, motivational, knowledgeable, transformational."
-         },
-        {"name": "Saiful Islam",
-            "role": 'Math Teacher',
-            "moto": "Innovative, charismatic, influential, visionary, approachable, inspiring, dynamic, motivational, knowledgeable, transformational."
-         },
-        {"name": "Ummey Honey",
-            "role": 'General Science',
-            "moto": "Innovative, charismatic, influential, visionary, approachable, inspiring, dynamic, motivational, knowledgeable, transformational."
-         },
-        {"name": "Nannu Khan",
-            "role": 'Scial Science',
-            "moto": "Innovative, charismatic, influential, visionary, approachable, inspiring, dynamic, motivational, knowledgeable, transformational."
-         },
-        {"name": "Uttam Kumar",
-            "role": 'English Teacher',
-            "moto": "Innovative, charismatic, influential, visionary, approachable, inspiring, dynamic, motivational, knowledgeable, transformational."
-         },
-        {"name": "Bellal Khan",
-            "role": 'Accounting',
-            "moto": "Innovative, charismatic, influential, visionary, approachable, inspiring, dynamic, motivational, knowledgeable, transformational."
-         },
-        {"name": "Songkar pal",
-            "role": 'Bangla Grammar',
-            "moto": "Innovative, charismatic, influential, visionary, approachable, inspiring, dynamic, motivational, knowledgeable, transformational."
-         },
-        {"name": "Salma Sultana",
-            "role": 'Head Teacher',
-            "moto": "Innovative, charismatic, influential, visionary, approachable, inspiring, dynamic, motivational, knowledgeable, transformational."
-         },
-        {"name": "Salma Sultana",
-            "role": 'Head Teacher',
-            "moto": "Innovative, charismatic, influential, visionary, approachable, inspiring, dynamic, motivational, knowledgeable, transformational."
-         },
-        {"name": "Salma Sultana",
-            "role": 'Head Teacher',
-            "moto": "Innovative, charismatic, influential, visionary, approachable, inspiring, dynamic, motivational, knowledgeable, transformational."
-         },
-        {"name": "Salma Sultana",
-            "role": 'Head Teacher',
-            "moto": "Innovative, charismatic, influential, visionary, approachable, inspiring, dynamic, motivational, knowledgeable, transformational."
-         },
-        {"name": "Salma Sultana",
-            "role": 'Head Teacher',
-            "moto": "Innovative, charismatic, influential, visionary, approachable, inspiring, dynamic, motivational, knowledgeable, transformational."
-         },
-        {"name": "Salma Sultana",
-            "role": 'Head Teacher',
-            "moto": "Innovative, charismatic, influential, visionary, approachable, inspiring, dynamic, motivational, knowledgeable, transformational."
-         },
-        {"name": "Salma Sultana",
-            "role": 'Head Teacher',
-            "moto": "Innovative, charismatic, influential, visionary, approachable, inspiring, dynamic, motivational, knowledgeable, transformational."
-         },
-    ]
 
     students = [
         {"name": "John Smith",
@@ -330,3 +392,8 @@ def Dashboard(request):
 
 def Dashbord_Home(request):
     return render(request, 'core/dashboard/dashboardhome.html', {"navs": dashnav})
+
+
+def Subjects_Manager(request):
+
+    return render(request, 'core/dashboard/subjectsmanager.html', {'teachers': teachers, 'navs': dashnav})
