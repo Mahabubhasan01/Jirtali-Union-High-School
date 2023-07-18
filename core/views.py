@@ -44,6 +44,11 @@ dashnav = [
     },
     {
         "url_name": "dashboard-home",
+        "icon_name": "bx bx-book-open",
+        "nav_name": "Subjects",
+    },
+    {
+        "url_name": "dashboard-home",
         "icon_name": "bx bx-money",
         "nav_name": "Fee",
     },

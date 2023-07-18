@@ -1,0 +1,500 @@
+{% load static %}
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<link href="./css/style.css" rel="stylesheet" />
+<link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css"
+/>
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link
+  href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans&family=IBM+Plex+Serif:wght@500&display=swap"
+  rel="stylesheet"
+/>
+<style>
+     @import url("https://fonts.googleapis.com/css2?family=Nunito:wght@300&display=swap");
+
+     * {
+       margin: 0;
+       padding: 0;
+       font-family: "Nunito", sans-serif;
+       }
+   {% comment %}  {% endcomment %}
+   .main-section h1 {
+     margin: 20px 0;
+     font-family: "IBM Plex Serif", serif;
+     font-size: 50px;
+     text-align: center;
+     color: #fff;
+     letter-spacing: 1px;
+   }
+
+   body {
+     margin: 0;
+     font-family: "IBM Plex Sans", sans-serif;
+     background-color: #262626;
+   }
+
+   .container {
+     margin: 0 auto;
+     display: flex;
+     max-width: 1400px;
+     align-items: start;
+     justify-content: center;
+    {% comment %}  height: 100%; {% endcomment %}
+   }
+
+   {% comment %} .main-section {
+     height: 100vh;
+   }
+  {% endcomment %}
+   .custom-select-wrapper .input-wrapper {
+     background-color: #fff;
+     padding: 0 25px;
+     border-radius: 6px;
+     box-shadow: 9px 10px #00000052;
+   }
+
+   .custom-select-wrapper .input-wrapper input[type="text"] {
+     border: 0;
+     padding: 15px 20px 15px 0px;
+     font-family: "IBM Plex Sans", sans-serif;
+     cursor: pointer;
+     outline: none;
+   }
+
+   .custom-select-wrapper ul {
+     box-shadow: 9px 10px #00000052;
+     list-style: none;
+     background-color: #fff;
+     border-radius: 8px;
+     padding: 0;
+     text-align: center;
+     height: 0;
+     overflow: hidden;
+     margin: 0;
+     transition: 0.1s ease-out;
+     position: absolute;
+     width: auto;
+     left: 0;
+     right: 0;
+   }
+
+   .custom-select-wrapper ul li {
+     line-height: 28px;
+     padding-bottom: 3px;
+     font-size: 14px;
+   }
+
+   .custom-select-wrapper ul li:last-child {
+     padding-bottom: 0;
+   }
+
+   .custom-select-wrapper.open-dropdown ul {
+     padding: 15px;
+     height: auto;
+     margin: 15px 0;
+     transition: 0.1s ease-in;
+   }
+
+   .custom-select-wrapper {
+     position: relative;
+     margin: 0 18px;
+     cursor: pointer;
+   }
+
+   .custom-select-wrapper.open-dropdown i {
+     transform: rotate(180deg);
+     transition: 0.9s;
+   }
+
+   .custom-select-wrapper i {
+     transition: 0.9s;
+   }
+
+
+   {% comment %}  {% endcomment %}
+     :root {
+       --green: #58a497;
+       --yellow: #e09449;
+       --lightgreen1: #a4bdb7;
+       --brown: #8b4448;
+       --gray: gray;
+       --lightgreen2: rgb(164, 189, 183, 0.5);
+       --box: #ededed;
+     }
+     .wrapper {
+       padding: 29px;
+     display: grid;
+     grid-template-columns: repeat(auto-fit, minmax(500px, 2fr));
+     grid-gap: 1rem;
+       }
+     {% comment %} body {
+       display: flex;
+       justify-content: center;
+       align-items: center;
+       min-height: 100vh;
+
+       background: #a4bdb7;
+     } {% endcomment %}
+
+     /* Content-1:Start */
+     .box {
+       width: 350px;
+       height: fit-content;
+       border-radius: 20px;
+       padding: 10px;
+       text-align: left;
+       background: #ededed;
+     }
+
+     .box1 {
+       margin-top: 10px;
+     }
+
+     .content {
+       margin: 15px 2px;
+     }
+
+     .image img {
+       height: auto;
+       width: 120px;
+       border-radius: 50%;
+
+       display: block;
+       margin-left: auto;
+       margin-right: auto;
+       margin-bottom: 5px;
+     }
+
+     .level {
+       font-size: 0.7em;
+       background-color: rgb(164, 189, 183, 0.5);
+       width: 50px;
+       padding: 3px;
+       border-radius: 5px;
+       font-weight: bolder;
+       letter-spacing: 1px;
+
+       display: block;
+       margin: 0px auto 10px;
+     }
+
+     .name {
+       font-size: .75em;
+       font-weight: bolder;
+       letter-spacing: 1px;
+     }
+
+     .job_title {
+       font-size: 0.65em;
+       font-weight: bolder;
+       color: gray;
+       margin-top: -2px;
+     }
+
+     .job_discription {
+       font-size: 0.7em;
+       color: gray;
+       margin: 10px 30px 20px;
+     }
+
+     .icons {
+       margin: 0px 30px;
+       font-size: 1.5em;
+       display: flex;
+       justify-content: space-around;
+     }
+
+     .icons button {
+       width: fit-content;
+       height: fit-content;
+       border: none;
+       font-size: 1em;
+     }
+
+     ion-icon:hover {
+       color: #58a497;
+       transition: 0.5s;
+     }
+
+     button {
+       width: 130px;
+       height: 40px;
+       border-radius: 10px;
+       font-weight: bolder;
+     }
+
+     .button {
+       display: flex;
+       justify-content: space-around;
+       flex-direction: row;
+       margin: 20px 30px 0px;
+       cursor: pointer;
+     }
+
+     .button .message {
+       background: #ededed;
+       border: 2px solid #000;
+     }
+
+     .button .connect {
+       background-color: #000;
+       color: #ededed;
+       border: none;
+     }
+     button.connect:hover {
+       letter-spacing: 1px;
+       transition: 0.5s;
+     }
+     button.message:hover {
+       letter-spacing: 1px;
+       transition: 0.5s;
+       background: rgba(88, 164, 151, 0.5);
+     }
+     /* Content-1:End */
+
+     /* Content-2:Start */
+     .box2 {
+       margin-top: 50px;
+       margin-bottom: 10px;
+     }
+
+     .box2 img {
+       width: 80px;
+     }
+
+     .row {
+       display: flex;
+       justify-content: space-between;
+       align-items: center;
+       margin: 0px 0px 10px;
+     }
+
+     h5 {
+       font-weight: bolder;
+       font-size: 1em;
+     }
+
+     .row p {
+       font-size: 0.8em;
+     }
+
+     .box2 .text {
+       text-align: left;
+     }
+
+     .box2 .text .name {
+       font-size: 1.1em;
+     }
+
+     .box2 .text .job_title {
+       font-size: 0.6em;
+       margin-bottom: 10px;
+     }
+
+     .box2 .text .job_discription {
+       margin: 0px;
+     }
+
+     .box2 .text .about {
+       font-size: 0.9em;
+       font-weight: bolder;
+     }
+     /* Content-2:End */
+
+     /* Responsiveness:Start */
+     @media screen and (max-width: 480px) {
+       .box {
+         width: 100vw;
+         border-radius: 0px;
+       }
+       .button {
+         display: flex;
+         flex-direction: column;
+       }
+       .button button {
+         width: 250px;
+       }
+       button.connect {
+         margin-top: 10px;
+       }
+       .content2 {
+         padding: 0px 20px;
+       }
+       .content2 img {
+         width: 60px;
+         height: 60px;
+       }
+     }
+     /* Responsiveness:End */
+</style>
+{% include 'core/dashboard/dashboardNav.html' %}
+<div class="home_content">
+  {% comment %} filters {% endcomment %}
+
+  <div class="main-section">
+    <h1>Students</h1>
+    <div class="container">
+      <div class="custom-select-wrapper">
+        <div class="input-wrapper">
+          <input
+            type="text"
+            placeholder="Select Class"
+            class="custom-select"
+            readonly="readonly"
+          />
+          <i class="fa fa-angle-down" aria-hidden="true"></i>
+          <ul>
+            <li>
+              <span>All</span>
+            </li>
+            <li>
+              <span>Six</span>
+            </li>
+            <li>
+              <span>Seven</span>
+            </li>
+            <li>
+              <span>Eight</span>
+            </li>
+            <li>
+              <span>Nine</span>
+            </li>
+            <li>
+              <span>Ten</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="custom-select-wrapper">
+        <div class="input-wrapper">
+          <input
+            type="text"
+            placeholder="Select Group"
+            class="custom-select"
+            readonly="readonly"
+          />
+          <i class="fa fa-angle-down" aria-hidden="true"></i>
+          <ul>
+            <li>
+              <span>Apple</span>
+            </li>
+            <li>
+              <span>Butterfly</span>
+            </li>
+            <li>
+              <span>Daffodil</span>
+            </li>
+            <li>
+              <span>Sunflower</span>
+            </li>
+            <li>
+              <span>Nevada</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="custom-select-wrapper">
+        <div class="input-wrapper">
+          <input
+            type="text"
+            placeholder="Select Group"
+            class="custom-select"
+            readonly="readonly"
+          />
+          <i class="fa fa-angle-down" aria-hidden="true"></i>
+          <ul>
+            <li>
+              <span>Science</span>
+            </li>
+            <li>
+              <span>Commerce</span>
+            </li>
+            <li>
+              <span>Arts</span>
+            </li>
+            <li>
+              <span>Computers</span>
+            </li>
+            <li>
+              <span>Others</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  {% comment %} filters {% endcomment %}
+  <h1>Class:</h1>
+  <section class="wrapper">
+    {% if teachers %} {% for teacher in teachers %}
+
+    <div class="box1 box">
+      <div class="content">
+        <div class="image">
+          <img
+            src="https://i.postimg.cc/bryMmCQB/profile-image.jpg"
+            alt="Profile Image"
+          />
+        </div>
+        <div class="level">
+          <p>PRO</p>
+        </div>
+        <div class="text">
+          <p class="name">Name: {{teacher.name}}</p>
+          <p class="job_title">Class: Ten</p>
+          <p class="job_title">Roll:</p>
+          {% comment %}
+          <p class="job_discription">{{teacher.moto}}</p>
+          {% endcomment %}
+        </div>
+
+        <div class="button">
+          <div>
+            <button class="message" type="button">View</button>
+          </div>
+          <div>
+            <button class="connect" type="button">Edit</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    {% endfor %} {% endif %}
+  </section>
+</div>
+<script>
+  $(document).ready(function () {
+    //Open Drop Down
+    $(".custom-select").click(function (e) {
+      e.preventDefault();
+
+      if ($(".custom-select-wrapper").hasClass("open-dropdown")) {
+        $(".custom-select-wrapper").removeClass("open-dropdown");
+        $(this).parent().parent().toggleClass("open-dropdown");
+      } else {
+        $(this).parent().parent().toggleClass("open-dropdown");
+      }
+    });
+
+    // On click get Current Selected tag Value
+
+    $("ul li span").click(function (e) {
+      if ($(".custom-select-wrapper").hasClass("open-dropdown")) {
+        var current_value = $(this).text();
+        console.log(current_value);
+        $(".open-dropdown .custom-select").val(current_value);
+        $(".custom-select-wrapper").removeClass("open-dropdown");
+      }
+    });
+
+    // close when click on Body
+    $("html").click(function (event) {
+      if ($(event.target).closest(".custom-select").length === 0) {
+        $(".custom-select-wrapper").removeClass("open-dropdown");
+      }
+    });
+  });
+</script>

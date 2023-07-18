@@ -1,0 +1,178 @@
+{% load static %} {% block link %}
+<link rel="stylesheet" href="{% static 'css/notific.css' %}" /> {% endblock
+link%} {% include 'core/dashboard/dashboardNav.html' %}
+<div class="home_content">
+  <div class="whole-box-items" id="notifications">
+    <div class="wrapperr">
+      <h1 class="notifications_title_name">Notificaitons:</h1>
+      <div class="notifications">
+        <div class="notifications__item">
+          <div class="">
+            <span>5 JULY</span>
+          </div>
+
+          <div class="notifications__item__content">
+            <span class="notifications__item__title"
+              >Just commented on your last post...</span
+            >
+          </div>
+        </div>
+        <div class="notifications__item">
+          <div class="">
+            <span>5 JULY</span>
+          </div>
+
+          <div class="notifications__item__content">
+            <span class="notifications__item__title"
+              >Just commented on your last post...</span
+            >
+          </div>
+        </div>
+        <div class="notifications__item">
+          <div class="">
+            <span>5 JULY</span>
+          </div>
+
+          <div class="notifications__item__content">
+            <span class="notifications__item__title"
+              >Just commented on your last post...</span
+            >
+          </div>
+        </div>
+        <div class="notifications__item">
+          <div class="">
+            <span>5 JULY</span>
+          </div>
+
+          <div class="notifications__item__content">
+            <span class="notifications__item__title"
+              >Just commented on your last post...</span
+            >
+          </div>
+        </div>
+        <div class="notifications__item">
+          <div class="">
+            <span>6 JULY</span>
+          </div>
+
+          <div class="notifications__item__content">
+            <span class="notifications__item__title"
+              >Just commented on your last post...</span
+            >
+          </div>
+        </div>
+        <div class="notifications__item">
+          <div class="">
+            <h3>7 JULY</h3>
+          </div>
+          <div class="divi"></div>
+          <div class="notifications__item__content">
+            <span class="notifications__item__title"
+              >Just commented on your last post...</span
+            >
+          </div>
+        </div>
+        <div class="notifications__item">
+          <div class="">
+            <span> 8 JULY</span>
+          </div>
+
+          <div class="notifications__item__content">
+            <span class="notifications__item__title"
+              >Just commented on your last post...</span
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="wrapperr">
+      <h1 class="notifications_title_name">Events:</h1>
+      <div class="notifications">
+        <div class="notifications__item">
+          <div class="notifications__item__avatar">
+            <img
+              src="https://i.ibb.co/PGgkCMy/images.jpghttps://i.ibb.co/LrwqkN3/download-1.jpg"
+            />
+          </div>
+
+          <div class="notifications__item__content">
+            <span class="notifications__item__title">Verdieu Steeve</span>
+            <span class="notifications__item__message"
+              >Just started following you</span
+            >
+          </div>
+
+          <div>
+            <div class="notifications__item__option archive js-option">
+              <i class="fas fa-folder"></i>
+            </div>
+            <div class="notifications__item__option delete js-option">
+              <i class="fas fa-trash"></i>
+            </div>
+          </div>
+        </div>
+
+        <div class="notifications__item">
+          <div class="notifications__item__avatar">
+            <img
+              src="https://i.ibb.co/PGgkCMy/images.jpghttps://i.ibb.co/LrwqkN3/download-1.jpg"
+            />
+          </div>
+
+          <div class="notifications__item__content">
+            <span class="notifications__item__title">Verdieu Steeve</span>
+            <span class="notifications__item__message"
+              >Just started following you</span
+            >
+            <span class="notifications__item__message">7 july 2006</span>
+          </div>
+
+          <div>
+            <div class="notifications__item__option archive js-option">
+              <i class="fas fa-folder"></i>
+            </div>
+            <div class="notifications__item__option delete js-option">
+              <i class="fas fa-trash"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<script>
+  (function () {
+    var timerId = null;
+
+    function startSetInterval() {
+      timerId = setInterval(function () {
+        var firstItem = document.querySelector(
+          ".notifications__item:first-child"
+        );
+        firstItem.style.animation = "slideUp 0.5s ease";
+
+        setTimeout(function () {
+          firstItem.style.animation = "";
+          document.querySelector(".notifications").appendChild(firstItem);
+        }, 500);
+      }, 2000);
+    }
+
+    startSetInterval();
+
+    var scrollItems = document.querySelectorAll(".notifications__item");
+
+    function pauseScroll() {
+      clearInterval(timerId);
+    }
+
+    function resumeScroll() {
+      startSetInterval();
+    }
+
+    scrollItems.forEach(function (item) {
+      item.addEventListener("mouseover", pauseScroll);
+      item.addEventListener("mouseout", resumeScroll);
+    });
+  })();
+</script>
