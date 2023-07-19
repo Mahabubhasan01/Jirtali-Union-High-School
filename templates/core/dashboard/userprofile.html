@@ -1,6 +1,269 @@
 {% load static %}
 <style></style>
+<link rel="stylesheet" href="{% static 'css/dashboard/userprofile.css' %}" />
 {% include 'core/dashboard/dashboardNav.html' %}
 <div class="home_content">
-  <h1>This is profile</h1>
+  <section class="section-about">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-6">
+          <img
+            src="https://bootdey.com/img/Content/avatar/avatar7.png"
+            alt="..."
+          />
+        </div>
+        <div class="col-lg-6">
+          <div
+            class="bg-secondary d-inline-block py-3 px-3 px-sm-6 mb-3 rounded"
+          >
+            <h3 class="h2 text-white mb-0">Jannatul Naim Zhumur</h3>
+            
+          </div>
+          <ul class="list-unstyled mb-3">
+            <li class="display-28">
+              <span class="display-26 text-secondary me-2 font-weight-600"
+                >Position:</span
+              >
+              Coach
+            </li>
+            <li class="display-28">
+              <span class="display-26 text-secondary me-2 font-weight-600"
+                >Experience:</span
+              >
+              10 Years
+            </li>
+            <li class="display-28">
+              <span class="display-26 text-secondary me-2 font-weight-600"
+                >Email:</span
+              >
+              edith@mail.com
+            </li>
+            <li class="display-28">
+              <span class="display-26 text-secondary me-2 font-weight-600"
+                >Website:</span
+              >
+              www.example.com
+            </li>
+            <li class="display-28">
+              <span class="display-26 text-secondary me-2 font-weight-600"
+                >Phone:</span
+              >
+              507 - 541 - 4567
+            </li>
+          </ul>
+          <ul class="social-icon-style1 list-unstyled mb-0 ps-0">
+            <li>
+              <a href="#!"><i class="ti-twitter-alt"></i></a>
+            </li>
+            <li>
+              <a href="#!"><i class="ti-facebook"></i></a>
+            </li>
+            <li>
+              <a href="#!"><i class="ti-pinterest"></i></a>
+            </li>
+            <li>
+              <a href="#!"><i class="ti-instagram"></i></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+  <hr />
+
+  <div class="profile-details-wrapper">
+    <section class="section-education">
+      <div class="container">
+        <div class="ro">
+          <div class="col-lg-12">
+            <span class="section-title text-primary mb-3 mb-sm-4"
+              >Bio data</span
+            >
+            <p>Name: Jannatul Naim</p>
+            <p>Gender: Female</p>
+            <p>Date of Birth: 7 July 2007</p>
+            <p>Mother`s Name:</p>
+            <p>Father`s Name: Zashim Uddin</p>
+            <p>Father`s Occupations: Managing Committe</p>
+            <p>Mother`s Occupations: Housewife</p>
+            <p>Religion: Islam</p>
+            <p>Blood group: O(+ve)</p>
+           
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="section-education">
+      <div class="container">
+        <div class="ro">
+          <div class="col-lg-12">
+            <span class="section-title text-primary mb-3 mb-sm-4"
+              >Academics</span
+            >
+            <p>Class: Ten</p>
+            <p>Group: Science</p>
+            <p>Section: Butterfly</p>
+            <p>Roll: 06</p>
+            <p>Board Roll: Na</p>
+            <p>Registration Number: Na</p>
+            <p>Role: Captain</p>
+            <p>Attendance: 80%</p>
+            
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-education">
+      <div class="container">
+        <div class="ro">
+          <div class="col-lg-12">
+            <span class="section-title text-primary mb-3 mb-sm-4"
+              >Address/Contact</span
+            >
+            <h3>Contact:</h3>
+            <p>Email: Example@gmail.com</p>
+            <p>Mother`s Number: 016xxxxxxx</p>
+            <p>Father`s Number: 014xxxxxxx</p>
+
+            <div class="add-details-wrapper">
+              <div>
+                <h3>Present Add:</h3>
+                <p>House: Middle Howlader Bari</p>
+                <p>Road: School road</p>
+                <p>Village: Middle Jirtali</p>
+                <p>Post office: Jirtali Bazar</p>
+                <p>Upozila: Begumgonj</p>
+                <p>Thana: Begumgonj</p>
+                <p>City: Noakhali</p>
+                <p>Division: Chottagram</p>
+              </div>
+              <div>
+                <h3>Permanent Add:</h3>
+                <p>House: Middle Howlader Bari</p>
+                <p>Road: School road</p>
+                <p>Village: Middle Jirtali</p>
+                <p>Post office: Jirtali Bazar</p>
+                <p>Upozila: Begumgonj</p>
+                <p>Thana: Begumgonj</p>
+                <p>City: Noakhali</p>
+                <p>Division: Chottagram</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+  <hr />
+  <div class="profile-details-wrapper">
+    <section class="section-education">
+      <div class="container">
+        <div class="ro">
+          <div class="col-lg-12">
+            <span class="section-title text-primary mb-3 mb-sm-4">Fees</span>
+
+            <table>
+              <tr>
+                <th>Month</th>
+                <th>Fees</th>
+                <th>Status</th>
+              </tr>
+              {% if fees %} {% for fee in fees %}
+              <tr>
+                <td>{{fee.month}}</td>
+                <td>{{fee.fee}}</td>
+                <td>{{fee.status}}</td>
+              </tr>
+              {% endfor %} {% endif %}
+            </table>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="section-education">
+      <div class="container">
+        <div class="ro">
+          <div class="col-lg-12">
+            <span class="section-title text-primary mb-3 mb-sm-4">Exams</span>
+
+            <table>
+              <tr>
+                <th>Name</th>
+                <th>Grade</th>
+                <th></th>
+              </tr>
+              <tr>
+                <td>First</td>
+                <td>5.00</td>
+                <td>View</td>
+              </tr>
+              <tr>
+                <td>Second</td>
+                <td>4.00</td>
+                <td>View</td>
+              </tr>
+              <tr>
+                <td>Test</td>
+                <td>Selected</td>
+                <td>View</td>
+              </tr>
+              <tr>
+                <td>Board Final</td>
+                <td>5.00</td>
+                <td>View</td>
+              </tr>
+              <tr>
+                <td>Admission</td>
+                <td>Selected</td>
+                <td>View</td>
+              </tr>
+            </table>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="section-education">
+      <div class="container">
+        <div class="ro">
+          <div class="col-lg-12">
+            <span class="section-title text-primary mb-3 mb-sm-4">Results</span>
+
+            <table>
+              <tr>
+                <th>Name</th>
+                <th>Grade</th>
+                <th></th>
+              </tr>
+              <tr>
+                <td>First</td>
+                <td>5.00</td>
+                <td>View</td>
+              </tr>
+              <tr>
+                <td>Second</td>
+                <td>4.00</td>
+                <td>View</td>
+              </tr>
+              <tr>
+                <td>Test</td>
+                <td>Selected</td>
+                <td>View</td>
+              </tr>
+              <tr>
+                <td>Board Final</td>
+                <td>5.00</td>
+                <td>View</td>
+              </tr>
+              <tr>
+                <td>Admission</td>
+                <td>Selected</td>
+                <td>View</td>
+              </tr>
+            </table>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
 </div>

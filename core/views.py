@@ -532,4 +532,67 @@ def Fees_Manager(request):
 
 
 def User_Profile(request):
-    return render(request, 'core/dashboard/userprofile.html', {'navs': dashnav})
+    fees = [
+        {
+            'month': "January",
+            'fee': 555,
+            'status': 'paid'
+        },
+        {
+            'month': "February",
+            'fee': 2354,
+            'status': 'unpaid'
+        },
+        {
+            'month': "March",
+            'fee': 5255,
+            'status': 'paid'
+        },
+        {
+            'month': "April",
+            'fee': 5535,
+            'status': 'pending'
+        },
+        {
+            'month': "May",
+            'fee': 5535,
+            'status': 'pending'
+        },
+        {
+            'month': "June",
+            'fee': 1432,
+            'status': 'pending'
+        },
+        {
+            'month': "July",
+            'fee': 555,
+            'status': 'paid'
+        },
+        {
+            'month': "August",
+            'fee': 555,
+            'status': 'paid'
+        },
+        {
+            'month': "September",
+            'fee': 555,
+            'status': 'paid'
+        },
+        {
+            'month': "October",
+            'fee': 555,
+            'status': 'paid'
+        },
+        {
+            'month': "November",
+            'fee': 1674,
+            'status': 'unpaid'
+        },
+        {
+            'month': "December",
+            'fee': 555,
+            'status': 'paid'
+        },
+        
+    ]
+    return render(request, 'core/dashboard/userprofile.html', {'navs': dashnav,'fees':fees})
