@@ -1,0 +1,59 @@
+{% extends 'core/base.html' %} {% block title %}First semister {% load static %}
+| results{% endblock title %} {% block link %}
+<link rel="stylesheet" href="{% static 'css/publishedresults.css' %}" /> {% endblock link %} {% block content %}
+
+<form>
+  <div class="ccontainer">
+    <h3>Search your result here😑</h3>
+
+    <div class="inp-box">
+      <label for="email"><b>Select class</b></label>
+      <br />
+      <select class="slc" name="phoneCode" required>
+        <option selected hidden value="">Class ix</option>
+        <option value="Six">Class six</option>
+        <option value="Seven">Class seven</option>
+        <option value="Eight">Class eight</option>
+        <option value="Nine">Class nine</option>
+        <option value="Ten">Class ten</option>
+      </select>
+    </div>
+
+    <label for="email"><b>Select year</b></label>
+    <br />
+    <select class="slc" name="phoneCode" required>
+      <option selected hidden value="">2023</option>
+      <option value="2023">2023</option>
+      <option value="2022">2022</option>
+      <option value="2021">2021</option>
+      <option value="2020">2020</option>
+    </select>
+    <label for="email"><b>Select section</b></label>
+    <br />
+    <select class="slc" name="phoneCode" required>
+      <option selected hidden value="">A</option>
+      <option value="A">A</option>
+      <option value="B">B</option>
+      <option value="C">C</option>
+      <option value="D">D</option>
+    </select>
+
+    <label for="email"><b>Class Roll</b></label>
+    <input type="number" name="username" placeholder="Enter your class roll number" required min="0" step="1" />
+    <label for="email"><b>7 + 9</b></label>
+    <input type="number" name="username" placeholder="Enter sum" required min="1" step="1" />
+    {% comment %}
+    <p>
+      By creating an account you agree to our
+      <a href="#" style="color: dodgerblue">Terms & Privacy</a>.
+    </p>
+    {% endcomment %}
+
+    <div class="form-btn">
+      <button type="submit" class="btn button reset">Reset</button>
+      <button type="submit" class="btn button">Search</button>
+    </div>
+  </div>
+</form>
+
+{% endblock content %}
