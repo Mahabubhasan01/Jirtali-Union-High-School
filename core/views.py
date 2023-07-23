@@ -512,8 +512,232 @@ def Dashbord_Home(request):
 
 
 def Subjects_Manager(request):
+    table_headings = [
+        {
+            "th": 'id',
+            "class": "sorting",
+            "tabindex": "0",
+            "aria-controls": "example",
+            "rowspan": 1,
+            "colspan": 1,
+            "aria-label": "Teacher Name: activate to sort column ascending",
+            "style": "width: 100px",
 
-    return render(request, 'core/dashboard/subjectsmanager.html', {'teachers': teachers, 'navs': dashnav})
+        },
+        {
+            "th": 'Class name',
+            "class": "sorting",
+            "tabindex": "0",
+            "aria-controls": "example",
+            "rowspan": 1,
+            "colspan": 1,
+            "aria-label": "Teacher Name: activate to sort column ascending",
+            "style": "width: 100px",
+
+        },
+        {
+            "th": 'Total students',
+            "class": "sorting",
+            "tabindex": "0",
+            "aria-controls": "example",
+            "rowspan": 1,
+            "colspan": 1,
+            "aria-label": "Teacher Name: activate to sort column ascending",
+            "style": "width: 100px",
+
+        },
+        {
+            "th": 'Total subjects',
+            "class": "sorting",
+            "tabindex": "0",
+            "aria-controls": "example",
+            "rowspan": 1,
+            "colspan": 1,
+            "aria-label": "Teacher Name: activate to sort column ascending",
+            "style": "width: 100px",
+
+        },
+    ]
+    subjects = [
+        {
+            "id": "scs30013",
+            "class_name": "Six",
+            "total_stu": 300,
+            "total_sub": 13
+        },
+        {
+            "id": "scs50013",
+            "class_name": "Seven",
+            "total_stu": 500,
+            "total_sub": 13
+        },
+        {
+            "id": "sce30013",
+            "class_name": "Eight",
+            "total_stu": 600,
+            "total_sub": 16
+        },
+        {
+            "id": "scn30013",
+            "class_name": "Nine",
+            "total_stu": 500,
+            "total_sub": 17
+        },
+        {
+            "id": "scs30013",
+            "class_name": "Ten",
+            "total_stu": 300,
+            "total_sub": 17
+        },
+    ]
+    return render(request, 'core/dashboard/subjectsmanager.html', {"subjects": subjects, "td": table_headings})
+
+
+def Class_Nine_Subjects_Manager(request):
+    table_headings = [
+        {
+            "th": 'id',
+            "class": "sorting",
+            "tabindex": "0",
+            "aria-controls": "example",
+            "rowspan": 1,
+            "colspan": 1,
+            "aria-label": "Teacher Name: activate to sort column ascending",
+            "style": "width: 100px",
+
+        },
+        {
+            "th": 'Class name',
+            "class": "sorting",
+            "tabindex": "0",
+            "aria-controls": "example",
+            "rowspan": 1,
+            "colspan": 1,
+            "aria-label": "Teacher Name: activate to sort column ascending",
+            "style": "width: 100px",
+
+        },
+        {
+            "th": 'Total students',
+            "class": "sorting",
+            "tabindex": "0",
+            "aria-controls": "example",
+            "rowspan": 1,
+            "colspan": 1,
+            "aria-label": "Teacher Name: activate to sort column ascending",
+            "style": "width: 100px",
+
+        },
+        {
+            "th": 'Total subjects',
+            "class": "sorting",
+            "tabindex": "0",
+            "aria-controls": "example",
+            "rowspan": 1,
+            "colspan": 1,
+            "aria-label": "Teacher Name: activate to sort column ascending",
+            "style": "width: 100px",
+
+        },
+    ]
+    subjects = [
+        {
+            "id": "scsgs30013",
+            "class_name": "Science",
+            "total_stu": 100,
+            "total_sub": 16
+        },
+        {
+            "id": "scsgb50013",
+            "class_name": "Business",
+            "total_stu": 100,
+            "total_sub": 16
+        },
+        {
+            "id": "scegh30013",
+            "class_name": "Humanities",
+            "total_stu": 100,
+            "total_sub": 16
+        },
+
+    ]
+    return render(request, 'core/dashboard/classninesubjectsmanager.html', {"subjects": subjects, "td": table_headings})
+
+
+def Class_Ten_Subjects_Manager(request):
+    table_headings = [
+        {
+            "th": 'id',
+            "class": "sorting",
+            "tabindex": "0",
+            "aria-controls": "example",
+            "rowspan": 1,
+            "colspan": 1,
+            "aria-label": "Teacher Name: activate to sort column ascending",
+            "style": "width: 100px",
+
+        },
+        {
+            "th": 'Class name',
+            "class": "sorting",
+            "tabindex": "0",
+            "aria-controls": "example",
+            "rowspan": 1,
+            "colspan": 1,
+            "aria-label": "Teacher Name: activate to sort column ascending",
+            "style": "width: 100px",
+
+        },
+        {
+            "th": 'Total students',
+            "class": "sorting",
+            "tabindex": "0",
+            "aria-controls": "example",
+            "rowspan": 1,
+            "colspan": 1,
+            "aria-label": "Teacher Name: activate to sort column ascending",
+            "style": "width: 100px",
+
+        },
+        {
+            "th": 'Total subjects',
+            "class": "sorting",
+            "tabindex": "0",
+            "aria-controls": "example",
+            "rowspan": 1,
+            "colspan": 1,
+            "aria-label": "Teacher Name: activate to sort column ascending",
+            "style": "width: 100px",
+
+        },
+    ]
+    subjects = [
+        {
+            "id": "scsgs30013",
+            "class_name": "Science",
+            "total_stu": 100,
+            "total_sub": 16
+        },
+        {
+            "id": "scsgb50013",
+            "class_name": "Business",
+            "total_stu": 100,
+            "total_sub": 16
+        },
+        {
+            "id": "scegh30013",
+            "class_name": "Humanities",
+            "total_stu": 100,
+            "total_sub": 16
+        },
+
+    ]
+    return render(request, 'core/dashboard/classtensubjectsmanager.html', {"subjects": subjects, "td": table_headings})
+
+
+def Subjects(request):
+
+    return render(request, 'core/dashboard/subjects.html', {'teachers': teachers, 'navs': dashnav})
 
 
 def Users_Manager(request):
@@ -593,6 +817,6 @@ def User_Profile(request):
             'fee': 555,
             'status': 'paid'
         },
-        
+
     ]
-    return render(request, 'core/dashboard/userprofile.html', {'navs': dashnav,'fees':fees})
+    return render(request, 'core/dashboard/userprofile.html', {'navs': dashnav, 'fees': fees})

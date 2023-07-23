@@ -1,29 +1,8 @@
 {% extends 'core/base.html' %} {% block title %}First semister {% load static %}
 | results{% endblock title %} {% block link %}
-<link rel="stylesheet" href="{% static 'css/publishedresults.css' %}" /> {% endblock link %} {% block content %}
-<style>
-  table {
-    width: 100%;
-    border-collapse: collapse;
-    border: 1px solid #ccc;
-  }
+<link rel="stylesheet" href="{% static 'css/publishedresults.css' %}" />
+{%endblock link %} {% block content %}
 
-  th,
-  td {
-    padding: 10px;
-    text-align: left;
-    border-bottom: 1px solid #ccc;
-  }
-
-  th {
-    background-color: #f0f0f0;
-    font-weight: bold;
-  }
-
-  tr:hover {
-    background-color: #f5f5f5;
-  }
-</style>
 <form>
   <div class="ccontainer">
     <h3>Search your result here😑</h3>
@@ -91,126 +70,127 @@
     </div>
   </div>
 </form>
-<section class="user-information">
-  <div class="container">
-    <div class="ro">
-      <div class="col-lg-12">
-        <span class="section-title text-primary mb-3 mb-sm-4"
-          >Student Personal information</span
-        >
+<div class="result-table">
+  <section class="user-information">
+    <div class="container">
+      <div class="">
+        <div class="">
+          <p class="section-title"
+            >Personal information</p>
 
-        <table>
-          <tr>
-            <th></th>
-            <th></th>
-            <th></th>
-            <th></th>
-          </tr>
-          <tr>
-            <td>Class</td>
-            <td>Nine</td>
-            <td>Student name</td>
-            <td>Jannatul Naim</td>
-          </tr>
-          <tr>
-            <td>Section</td>
-            <td>Butterfly</td>
-            <td>Father`s name</td>
-            <td>Zashim Uddin</td>
-          </tr>
-          <tr>
-            <td>Roll no</td>
-            <td>0006</td>
-            <td>Mother`s name</td>
-            <td>Mother`s name</td>
-          </tr>
-          <tr>
-            <td>Group</td>
-            <td>Science</td>
-            <td>Date of birth</td>
-            <td>07 July 2007</td>
-          </tr>
-          <tr>
-            <td>Result</td>
-            <td>Passed</td>
-          </tr>
-          <tr>
-            <td>Gpa</td>
-            <td>5.00</td>
-          </tr>
-        </table>
+          <table>
+            {% comment %} <tr>
+              <th></th>
+              <th></th>
+              <th></th>
+              <th></th>
+            </tr> {% endcomment %}
+            <tr>
+              <td>Class</td>
+              <td>Nine</td>
+              <td>Student name</td>
+              <td>Jannatul Naim</td>
+            </tr>
+            <tr>
+              <td>Section</td>
+              <td>Butterfly</td>
+              <td>Father`s name</td>
+              <td>Zashim Uddin</td>
+            </tr>
+            <tr>
+              <td>Roll no</td>
+              <td>0006</td>
+              <td>Mother`s name</td>
+              <td>Mother`s name</td>
+            </tr>
+            <tr>
+              <td>Group</td>
+              <td>Science</td>
+              <td>Date of birth</td>
+              <td>07 July 2007</td>
+            </tr>
+            <tr>
+              <td>Result</td>
+              <td>Passed</td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>Gpa</td>
+              <td>5.00</td>
+            </tr>
+          </table>
+        </div>
       </div>
     </div>
-  </div>
-</section>
-<section class="user-information">
-  <div class="container">
-    <div class="ro">
-      <div class="col-lg-12">
-        <span class="section-title text-primary mb-3 mb-sm-4"
-          >Result Sheet</span
-        >
+  </section>
+  <section class="student-resultsheet">
+    <div class="container">
+      <div class="">
+        <div class="">
+          <p class="section-title" >Result Sheet</p>
 
-        <table>
-          <tr>
-            <th>Code</th>
-            <th>Subject</th>
-            <th>Grade</th>
-          </tr>
-          <tr>
-            <td>101</td>
-            <td>BANGLA</td>
-            <td>5.00</td>
-          </tr>
-          <tr>
-            <td>107</td>
-            <td>ENGLISH</td>
-            <td>5.00</td>
-          </tr>
-          <tr>
-            <td>109</td>
-            <td>MATHEMATICS</td>
-            <td>5.00</td>
-          </tr>
-          <tr>
-            <td>150</td>
-            <td>BANGLADESH AND GLOBAL STUDIES</td>
-            <td>5.00</td>
-          </tr>
-          <tr>
-            <td>111</td>
-            <td>RELIGION AND MORAL EDUCATION (ISLAM)</td>
-            <td>5.00</td>
-          </tr>
-          <tr>
-            <td>136</td>
-            <td>PHYSICS</td>
-            <td>5.00</td>
-          </tr>
-          <tr>
-            <td>137</td>
-            <td>CHEMISTRY</td>
-            <td>5.00</td>
-          </tr>
-          <tr>
-            <td>138</td>
-            <td>BIOLOGY</td>
-            <td>5.00</td>
-          </tr>
-          <tr>
-            <td>147</td>
-            <td>PHYSICAL EDUCATION, HEALTH & SPORTS</td>
-            <td>5.00</td>
-          </tr>
-          <tr>
-            <td>126</td>
-            <td>HIGHER MATHEMATICS</td>
-            <td>5.00</td>
-          </tr>
-        </table>
+          <table>
+            <tr>
+              <th>Code</th>
+              <th>Subject</th>
+              <th>Grade</th>
+            </tr>
+            <tr>
+              <td>101</td>
+              <td>BANGLA</td>
+              <td>5.00</td>
+            </tr>
+            <tr>
+              <td>107</td>
+              <td>ENGLISH</td>
+              <td>5.00</td>
+            </tr>
+            <tr>
+              <td>109</td>
+              <td>MATHEMATICS</td>
+              <td>5.00</td>
+            </tr>
+            <tr>
+              <td>150</td>
+              <td>BANGLADESH AND GLOBAL STUDIES</td>
+              <td>5.00</td>
+            </tr>
+            <tr>
+              <td>111</td>
+              <td>RELIGION AND MORAL EDUCATION (ISLAM)</td>
+              <td>5.00</td>
+            </tr>
+            <tr>
+              <td>136</td>
+              <td>PHYSICS</td>
+              <td>5.00</td>
+            </tr>
+            <tr>
+              <td>137</td>
+              <td>CHEMISTRY</td>
+              <td>5.00</td>
+            </tr>
+            <tr>
+              <td>138</td>
+              <td>BIOLOGY</td>
+              <td>5.00</td>
+            </tr>
+            <tr>
+              <td>147</td>
+              <td>PHYSICAL EDUCATION, HEALTH & SPORTS</td>
+              <td>5.00</td>
+            </tr>
+            <tr>
+              <td>126</td>
+              <td>HIGHER MATHEMATICS</td>
+              <td>5.00</td>
+            </tr>
+          </table>
+        </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
+</div>
 
 {% endblock content %}
