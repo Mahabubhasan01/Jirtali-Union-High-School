@@ -272,15 +272,15 @@
     color: inherit;
   }
 
-  /* CARDS */
+  /* nav-cardS */
 
-  .cards {
+  .nav-cards {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
   }
 
-  .card {
+  .nav-card {
     margin: 10px;
     padding: 5px;
     width: 200px;
@@ -294,20 +294,20 @@
     cursor: pointer;
   }
 
-  .card:hover {
+  .nav-card:hover {
     box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.4);
     transform: scale(1.01);
   }
 
-  .card__link,
-  .card__exit,
-  .card__icon {
+  .nav-card__link,
+  .nav-card__exit,
+  .nav-card__icon {
     position: relative;
     text-decoration: none;
     color: rgba(255, 255, 255, 0.9);
   }
 
-  .card__link::after {
+  .nav-card__link::after {
     position: absolute;
     top: 25px;
     left: 0;
@@ -318,57 +318,57 @@
     transition: all 0.5s;
   }
 
-  .card__link:hover::after {
+  .nav-card__link:hover::after {
     width: 100%;
   }
 
-  .card__exit {
+  .nav-card__exit {
     grid-row: 1/2;
     justify-self: end;
   }
 
-  .card__icon {
+  .nav-card__icon {
     grid-row: 2/3;
     font-size: 30px;
   }
 
-  .card__title {
+  .nav-card__title {
     grid-row: 3/4;
     font-weight: 400;
     color: #ffffff;
   }
 
-  .card__apply {
+  .nav-card__apply {
     grid-row: 4/5;
     align-self: center;
   }
 
-  /* CARD BACKGROUNDS */
+  /* nav-card BACKGROUNDS */
 
-  .card-1 {
+  .nav-card-1 {
     background: radial-gradient(#11101d, #11101d);
   }
 
-  .card-2 {
+  .nav-card-2 {
     background: radial-gradient(#fbc1cc, #fa99b2);
   }
 
-  .card-3 {
+  .nav-card-3 {
     background: radial-gradient(#76b2fe, #b69efe);
   }
 
-  .card-4 {
+  .nav-card-4 {
     background: radial-gradient(#60efbc, #58d5c9);
   }
 
-  .card-5 {
+  .nav-card-5 {
     background: radial-gradient(#f588d8, #c0a3e5);
   }
 
   /* RESPONSIVE */
 
   @media (max-width: 1600px) {
-    .cards {
+    .nav-cards {
       justify-content: center;
     }
   }

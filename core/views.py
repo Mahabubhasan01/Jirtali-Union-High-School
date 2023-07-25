@@ -820,3 +820,61 @@ def User_Profile(request):
 
     ]
     return render(request, 'core/dashboard/userprofile.html', {'navs': dashnav, 'fees': fees})
+
+
+def Notifications_Manager(request):
+    data = [
+        {
+            'notices': [
+                {
+                    'id': 'n0001',
+                    'img': 'https://i.postimg.cc/MZ9LqR3g/270203363-451687359873789-7253976621001494614-n.jpg',
+                    'name': 'Tomorrow will be held annual sports',
+                    'published': '5 July 2022'
+                },
+                {
+                    'id': 'n0001',
+                    'img': 'https://i.postimg.cc/MZ9LqR3g/270203363-451687359873789-7253976621001494614-n.jpg',
+                    'name': 'Tomorrow will be held annual sports',
+                    'published': '5 July 2022'
+                },
+                {
+                    'id': 'n0001',
+                    'img': 'https://i.postimg.cc/MZ9LqR3g/270203363-451687359873789-7253976621001494614-n.jpg',
+                    'name': 'Tomorrow will be held annual sports',
+                    'published': '5 July 2022'
+                },
+                {
+                    'id': 'n0001',
+                    'img': 'https://i.postimg.cc/MZ9LqR3g/270203363-451687359873789-7253976621001494614-n.jpg',
+                    'name': 'Tomorrow will be held annual sports',
+                    'published': '5 July 2022'
+                },
+                {
+                    'id': 'n0001',
+                    'img': 'https://i.postimg.cc/MZ9LqR3g/270203363-451687359873789-7253976621001494614-n.jpg',
+                    'name': 'Tomorrow will be held annual sports',
+                    'published': '5 July 2022'
+                },
+                {
+                    'id': 'n0001',
+                    'img': 'https://i.postimg.cc/MZ9LqR3g/270203363-451687359873789-7253976621001494614-n.jpg',
+                    'name': 'Tomorrow will be held annual sports',
+                    'published': '5 July 2022'
+                },
+                # More notice dictionaries...
+            ]
+        },
+        {
+            'events': [
+                {
+                    'id': 'e0001',
+                    'img': 'https://i.postimg.cc/MZ9LqR3g/270203363-451687359873789-7253976621001494614-n.jpg',
+                    'name': 'Tomorrow will be held annual sports',
+                    'published': '5 July 2022'
+                },
+                # More event dictionaries...
+            ]
+        }
+    ]
+    return render(request, 'core/dashboard/notificationsmanager.html', {'data':data[0]['notices']})

@@ -8,6 +8,7 @@ urlpatterns = [
          name='cn'),
     path('subjects-manager/class_ten_subjects-manager', views.Class_Ten_Subjects_Manager,
          name='ct'),
+    path('dashboard/notifications-manager',views.Notifications_Manager,name='notifications-manager'),
     path('subjects', views.Subjects, name='subjects'),
     path('users-manager', views.Users_Manager, name='users'),
     path('staffs-manager', views.Staffs_Manager, name='staffs'),
